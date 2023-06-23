@@ -3,11 +3,12 @@ print("Welcome to the rollercoaster!")
 height = int(input("What is your height in cm? "))
 age = int(input("What is your age? "))
 picture = input("Do you want to take a rollercoaster picture? Yes / No\n")
+# prices
 picture_price = 3
 kids_ticket = 5
 teens_ticket = 7
 adult_ticket = 12
-
+# code
 if height >= 120:
     if age < 12:
         if picture.lower() == "yes":
