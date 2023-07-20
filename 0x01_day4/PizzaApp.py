@@ -3,15 +3,15 @@ size = input("What size pizza do you want? S, M, or L ")
 add_pepperoni = input("Do you want pepperoni? Y or N ")
 extra_cheese = input("Do you want extra cheese? Y or N ")
 
-######### Pizza Prices##########
+
 small_pizza = 15
 medium_pizza = 20
 large_pizza = 25
-######## Additions###########
+
 pepperoni_s = 2
 Pepperoni_m_l = 3
 Cheese = 1
-############ code##########
+
 
 if size.upper() == "S":
     if add_pepperoni.lower() == "Y":
