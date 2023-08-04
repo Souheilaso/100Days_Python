@@ -14,14 +14,16 @@ def random_color():
     return color_rgb
 
 
-directions = [0, 90, 180, 270]
-tim.width(10)
-for _ in range(200):
-    tim.color(random_color())
-    tim.speed('fastest')
-    tim.forward(30)
-    tim.setheading(random.choice(directions))
+tim.speed('fastest')
 
 
+def draw_spiral(size_of_gap):
+    for _ in range(int(360 / size_of_gap)):
+        tim.color(random_color())
+        tim.circle(100)
+        tim.setheading(tim.heading() + size_of_gap)
+
+
+draw_spiral(2)
 screen = Screen()
 screen.exitonclick()
