@@ -4,19 +4,19 @@ tim = Turtle()
 
 
 def forward():
-    tim.forward(20)
+    tim.forward(10)
 
 
 def backward():
-    tim.backward(20)
+    tim.backward(10)
 
 
 def left():
-    tim.left(90)
+    tim.left(10)
 
 
 def right():
-    tim.right(90)
+    tim.right(10)
 
 
 def clear():
