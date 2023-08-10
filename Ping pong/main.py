@@ -23,12 +23,14 @@ screen.tracer(0)
 # def go_down():
 #     new_y = paddle.ycor() - 20
 #     paddle.goto(paddle.xcor(), new_y)
-
-r_paddle = Paddle(350, 0)
 screen.listen()
-
+r_paddle = Paddle(350, 0)
 screen.onkey(r_paddle.go_up, "Up")
 screen.onkey(r_paddle.go_down, "Down")
+
+l_paddle = Paddle(-350, 0)
+screen.onkey(l_paddle.go_up, "Up")
+screen.onkey(l_paddle.go_down, "Down")
 
 game_is_on = True
 while game_is_on:
