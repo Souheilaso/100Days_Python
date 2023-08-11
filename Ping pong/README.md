@@ -16,7 +16,7 @@ To run the game, make sure you have Python installed on your system. Clone this 
 
 bashCopy code
 
-`git clone https://github.com/your-username/ping-pong-game.git
+`git clone https://github.com/Souheilaso/ping-pong-game.git
 cd ping-pong-game` 
 
 Run the `main.py` script to start the game.
