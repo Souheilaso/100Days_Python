@@ -1,6 +1,6 @@
 from turtle import Turtle
-XMOVE = 1
-YMOVE = 2
+XMOVE = 10
+YMOVE = 10
 
 
 class Ball(Turtle):
