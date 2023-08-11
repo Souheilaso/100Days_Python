@@ -11,6 +11,7 @@ screen.bgcolor("black")
 screen.title("Ping Pong")
 screen.tracer(0)
 line = Separator()
+line.draw()
 
 screen.listen()
 r_paddle = Paddle(350, 0)

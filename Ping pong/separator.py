@@ -8,5 +8,11 @@ class Separator(Turtle):
         self.hideturtle()
         self.penup()
         self.goto(0, -300)
-        self.pendown()
-        self.goto(0, 300)
+
+    def draw(self):
+        self.setheading(90)
+        for _ in range(30):
+            self.pendown()
+            self.forward(20)
+            self.penup()
+            self.forward(20)
