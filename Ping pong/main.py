@@ -2,6 +2,7 @@ from turtle import Screen
 from paddle import Paddle
 from ball import Ball
 from scoreboard import Score
+from separator import Separator
 import time
 
 screen = Screen()
@@ -9,6 +10,7 @@ screen.setup(height=600, width=800)
 screen.bgcolor("black")
 screen.title("Ping Pong")
 screen.tracer(0)
+line = Separator()
 
 screen.listen()
 r_paddle = Paddle(350, 0)
