@@ -1,4 +1,5 @@
 from turtle import Screen
+from car_manager import CarManager
 import time
 from player import Player
 screen = Screen()
@@ -8,6 +9,7 @@ screen.tracer(0)
 player = Player()
 screen.listen()
 screen.onkey(player.go_up, "Up")
+car = CarManager()
 
 game_is_on = True
 while game_is_on:
