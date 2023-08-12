@@ -12,5 +12,8 @@ class CarManager(Turtle):
         self.penup()
         self.shapesize(stretch_wid=2, stretch_len=1)
         self.color(random.choice(COLORS))
-        self.goto(280, 0)
-        self.setheading(90)
+        self.goto(280, random.randint(-250, 250))
+        self.setheading(180)
+
+    def move(self):
+        self.forward(STARTING_MOVE_DISTANCE)
