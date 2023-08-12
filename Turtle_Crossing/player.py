@@ -12,3 +12,4 @@ class Player(Turtle):
         self.color("black")
         self.penup()
         self.goto(0, -280)
+        self.setheading(90)
