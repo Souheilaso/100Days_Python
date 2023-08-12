@@ -13,3 +13,4 @@ class CarManager(Turtle):
         self.shapesize(stretch_wid=2, stretch_len=1)
         self.color(random.choice(COLORS))
         self.goto(280, 0)
+        self.setheading(90)
