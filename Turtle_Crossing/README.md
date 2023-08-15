@@ -1,4 +1,5 @@
 # Turtle Racing Game
+![image](https://github.com/Souheilaso/100Days_Python/assets/74138100/471836df-310a-45d0-be8c-886e0586f27d)
 
 This is a simple collision avoidance game created using Python's Turtle graphics library.
 
