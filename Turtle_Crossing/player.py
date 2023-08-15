@@ -18,5 +18,5 @@ class Player(Turtle):
         new_y = self.ycor() + MOVE_DISTANCE
         self.sety(new_y)
 
-    def reset(self):
+    def reset_game(self):
         self.goto(STARTING_POSITION)
