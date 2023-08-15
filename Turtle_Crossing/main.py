@@ -23,4 +23,13 @@ while game_is_on:
         cars.append(new_car)
     for car in cars:
         car.move()
+
+    for car in cars:
+        if car.distance(player) < 20:  # Adjust the distance as needed
+            game_is_on = False
+
+    if player.ycor() > 280:
+        game_is_on = False
+    # else:
+    #     player.go_up()
 screen.exitonclick()
