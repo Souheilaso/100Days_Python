@@ -30,7 +30,8 @@ while game_is_on:
             game_is_on = False
 # turtle collision with wall
     if player.ycor() > 280:
+        score.points()
+        score.update_score()
         game_is_on = False
-    # else:
-    #     player.go_up()
+
 screen.exitonclick()
