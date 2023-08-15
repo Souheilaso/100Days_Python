@@ -27,7 +27,7 @@ while game_is_on:
     for car in cars:
         if car.distance(player) < 20:  # Adjust the distance as needed
             game_is_on = False
-# cars collision with wall
+# turtle collision with wall
     if player.ycor() > 280:
         game_is_on = False
     # else:
