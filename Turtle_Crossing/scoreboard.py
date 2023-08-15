@@ -1,6 +1,7 @@
 from turtle import Turtle
 ALIGNMENT = "left"
 FONT = ("Courier", 20, "normal")
+FONT2 = ("Courier", 70, "normal")
 
 
 class Score(Turtle):
@@ -24,4 +25,4 @@ class Score(Turtle):
         self.penup()
         self.hideturtle()
         self.goto(0, 0)
-        self.write("GAME OVER", align=ALIGNMENT, font=FONT)
+        self.write("GAME OVER", align="center", font=FONT2)
