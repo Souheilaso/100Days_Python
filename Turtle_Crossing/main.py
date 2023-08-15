@@ -33,6 +33,7 @@ while game_is_on:
     if player.ycor() > 280:
         score.points()
         score.update_score()
+        player.reset()
         game_is_on = False
 
 screen.exitonclick()
