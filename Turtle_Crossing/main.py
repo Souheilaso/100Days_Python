@@ -34,6 +34,5 @@ while game_is_on:
         score.points()
         score.update_score()
         player.reset()
-        game_is_on = False
 
 screen.exitonclick()
