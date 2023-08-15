@@ -3,6 +3,7 @@ from car_manager import CarManager
 import random
 import time
 from player import Player
+from scoreboard import Score
 screen = Screen()
 screen.setup(width=600, height=600)
 screen.title("Turtle Racing")
