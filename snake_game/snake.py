@@ -30,6 +30,7 @@ class Snake:
     def reset(self):
         self.snakes.clear()
         self.create_snake()
+        self.head = self.snakes[0]
 
     def extend(self):
         self.add_snake(self.snakes[-1].position())
