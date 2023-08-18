@@ -32,6 +32,7 @@ while game_is_on:
 
     if snake.head.xcor() > 280 or snake.head.xcor() < -280 or snake.head.ycor() > 280 or snake.head.ycor() < -280:
         score.reset()
+        snake.reset()
 
     for segment in snake.snakes:
         if segment == snake.head:
