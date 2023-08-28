@@ -27,3 +27,6 @@ temp_list = data["temp"].to_list()
 
 average = data["temp"].mean()
 print(average)
+
+maximum = data["temp"].max()
+print(maximum)
