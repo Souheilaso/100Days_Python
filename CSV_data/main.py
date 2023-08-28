@@ -35,7 +35,7 @@ temp_list = data["temp"].to_list()
 # print(data.temp)
 
 monday = data[data.day == "Monday"]
-print(monday)
+print(monday.temp * 9/5 + 32)
 
-maximum = data[data.temp == data.temp.max()]
-print(maximum)
+# maximum = data[data.temp == data.temp.max()]
+# print(maximum)
