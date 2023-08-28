@@ -25,11 +25,14 @@ temp_list = data["temp"].to_list()
 # print(statistics.mean(temp_list))
 #
 
-average = data["temp"].mean()
-print(average)
+# average = data["temp"].mean()
+# print(average)
+#
+# maximum = data["temp"].max()
+# print(maximum)
+#
+# print(data.condition)
+# print(data.temp)
 
-maximum = data["temp"].max()
-print(maximum)
-
-print(data.condition)
-print(data.temp)
+monday = data[data.day == "Monday"]
+print(monday)
