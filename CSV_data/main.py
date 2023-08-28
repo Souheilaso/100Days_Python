@@ -30,3 +30,6 @@ print(average)
 
 maximum = data["temp"].max()
 print(maximum)
+
+print(data.condition)
+print(data.temp)
