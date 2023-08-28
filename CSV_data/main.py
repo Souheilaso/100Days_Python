@@ -36,3 +36,6 @@ temp_list = data["temp"].to_list()
 
 monday = data[data.day == "Monday"]
 print(monday)
+
+maximum = data[data.temp == data.temp.max()]
+print(maximum)
