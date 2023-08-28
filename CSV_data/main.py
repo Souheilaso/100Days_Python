@@ -18,8 +18,12 @@ data_dict = data.to_dict()
 print(data_dict)
 
 temp_list = data["temp"].to_list()
-average = sum(temp_list) / len(temp_list)
-print(average)
+# average = sum(temp_list) / len(temp_list)
+# print(average)
 
-import statistics
-print(statistics.mean(temp_list))
+# import statistics
+# print(statistics.mean(temp_list))
+#
+
+average = data["temp"].mean()
+print(average)
