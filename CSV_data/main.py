@@ -40,10 +40,14 @@ print(monday.temp * 9/5 + 32)
 # maximum = data[data.temp == data.temp.max()]
 # print(maximum)
 
+# creating a dataframe
 new_data = {
     "students": ["Mike", "James", "Angela"],
     "Scores": [76, 56, 65]
 }
 
 dataframe = pandas.DataFrame(new_data)
+dataframe.to_csv("students.csv")
 print(dataframe)
+
+
