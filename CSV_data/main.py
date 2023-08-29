@@ -53,6 +53,8 @@
 import pandas
 data = pandas.read_csv("Squirrel_Data.csv")
 black_squirrel = data[data["Primary Fur Color"] == "Black"]
+gray_squirrel = data[data["Primary Fur Color"] == "Gray"]
+cinnamon_squirrel = data[data["Primary Fur Color"] == "Cinnamon"]
 
 
 
