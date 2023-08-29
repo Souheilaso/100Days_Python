@@ -56,7 +56,9 @@ black_squirrel = len(data[data["Primary Fur Color"] == "Black"])
 gray_squirrel = len(data[data["Primary Fur Color"] == "Gray"])
 cinnamon_squirrel = len(data[data["Primary Fur Color"] == "Cinnamon"])
 
-
+print(f"The number of Black Squirrels is:{black_squirrel}")
+print(f"The number of Gray Squirrels is:{gray_squirrel}")
+print(f"The number of Cinnamon Squirrels is:{cinnamon_squirrel}")
 
 
 
