@@ -62,10 +62,12 @@ print(f"The number of Cinnamon Squirrels is: {cinnamon_squirrel}")
 
 #dataframe
 dictionary = {
-    "Fur Color": ["Black", "Gray", "Cinnamon"]
+    "Fur Color": ["Black", "Gray", "Cinnamon"],
     "Squirrels Number": [black_squirrel, gray_squirrel, cinnamon_squirrel]
 
 }
+data_frame = pandas.DataFrame(dictionary)
+data_frame.to_csv("new_data.csv")
 
 
 
