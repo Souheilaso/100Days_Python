@@ -15,3 +15,5 @@ with open("file2.txt") as data_file2:
 
 list_1 = [int(number) for number in content1.split()]
 list_2 = [int(number) for number in content2.split()]
+similarities_list = [same_num for same_num in list_1 if same_num in list_2]
+print(f"Similar numbers from file1 and file2 are: {similarities_list}")
