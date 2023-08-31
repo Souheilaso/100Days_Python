@@ -19,6 +19,18 @@ weather_c = {
 
 # Write your code 👇 below:
 
-weather_f = {days: temperature * 9/5 + 32 for (days, temperature) in weather_c.items()}
+weather_f = {days: temperature * 9 / 5 + 32 for (days, temperature) in weather_c.items()}
 
 print(weather_f)
+
+# iterating through a dictionary using pandas abd iterrow
+student_dict = {
+    "student": ["Souheila", "Francisco", "Angela"],
+    "score": [80, 99, 56]
+}
+
+import pandas
+
+data_frame = pandas.DataFrame(student_dict)
+for index, row in data_frame.iterrows():
+    print(row.score)
