@@ -27,5 +27,8 @@ data = pandas.read_csv("nato_alphabets.csv")
 
 # TODO 2. turn data into a dictionary
 data_dict = data.to_dict()
-print(data_dict)
+
+# TODO 3. turn dictionary into a dataframe
+data_frame = pandas.DataFrame(data_dict)
+print(data_frame)
 
