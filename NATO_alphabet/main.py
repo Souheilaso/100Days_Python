@@ -20,15 +20,11 @@
 # # Keyword Method with iterrows()
 # # {new_key:new_value for (index, row) in df.iterrows()}
 
-# TODO 1. read csv.
+# TODO 1. read csv and turn it into a dictionary
 import pandas
 
 data = pandas.read_csv("nato_alphabets.csv")
 
-# TODO 2. turn data into a dictionary
-data_dict = data.to_dict()
+phonetic_dict = {row.letter: row.code for (index, row) in data.iterrows()}
 
-# TODO 3. turn dictionary into a dataframe
-data_frame = pandas.DataFrame(data_dict)
-print(data_frame)
 
