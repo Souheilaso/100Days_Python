@@ -25,6 +25,7 @@ import pandas
 
 data = pandas.read_csv("nato_alphabets.csv")
 
-
-
+# TODO 2. turn data into a dictionary
+data_dict = data.to_dict()
+print(data_dict)
 
