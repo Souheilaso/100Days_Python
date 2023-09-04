@@ -6,3 +6,10 @@ def add(*args):
 
 
 add(1, 2)
+
+
+def calculate(n, **kwargs):
+    n += kwargs["add"]
+    n *= kwargs["multiply"]
+
+calculate(2, add=3, multiply=5)
