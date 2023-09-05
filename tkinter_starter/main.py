@@ -13,6 +13,9 @@ greet.pack()
 button = tkinter.Button(text="click me", height=3, width=20, foreground="red")
 button.pack()
 
+# Entry
+entry = tkinter.Entry()
+entry.pack()
 
 
 
