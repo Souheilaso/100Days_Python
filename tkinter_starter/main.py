@@ -20,7 +20,9 @@ greet = tkinter.Label(text="Python Rocks", fg="red")
 
 # buttons
 button = tkinter.Button(text="Save", height=3, width=20, foreground="red", command=save_print)
+button.grid(column=1, row=1)
 # button.pack()
+
 
 # Entry
 entry = tkinter.Entry()
