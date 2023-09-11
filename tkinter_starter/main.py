@@ -15,6 +15,7 @@ window.config(padx=20, pady=20)
 my_label = tkinter.Label(text="I am a label", font=("Arial", 24, "bold"))
 # my_label.pack()
 my_label.grid(column=0, row=0)
+my_label.config(padx=30, pady=10)
 
 greet = tkinter.Label(text="Python Rocks", fg="red")
 # greet.pack()
