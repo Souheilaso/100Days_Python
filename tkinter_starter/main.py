@@ -9,6 +9,7 @@ def save_print():
 window = tkinter.Tk()
 window.title("First GUI")
 window.minsize(width=500, height=300)
+window.config(padx=20, pady=20)
 
 
 my_label = tkinter.Label(text="I am a label", font=("Arial", 24, "bold"))
