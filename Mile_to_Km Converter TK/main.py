@@ -12,3 +12,8 @@ entry.grid(column=1, row=0)
 # Creating label 1
 miles_label = tkinter.Label(text="Miles", font=("Arial", 24, "bold"))
 miles_label.grid(column=2, row=0)
+
+# creating second row label
+equal_label = tkinter.Label(text="is equal to")
+equal_label.grid(column=0, row=1)
+window.mainloop()
