@@ -14,6 +14,10 @@ miles_label = tkinter.Label(text="Miles", font=("Arial", 24, "bold"))
 miles_label.grid(column=2, row=0)
 
 # creating second row label
-equal_label = tkinter.Label(text="is equal to")
+equal_label = tkinter.Label(text="is equal to", font=("Arial", 24, "bold"))
 equal_label.grid(column=0, row=1)
+
+# creating column 1 label
+number_label = tkinter.Label(text=0, font=("Arial", 24, "bold"))
+number_label.grid(column=1, row=1)
 window.mainloop()
