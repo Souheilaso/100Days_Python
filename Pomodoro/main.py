@@ -49,7 +49,7 @@ restart_btn.grid(column=3, row=3)
 
 # creating a check mark label
 check_label = tkinter.Label(text="✓", fg=GREEN, bg=YELLOW)
-check_label.grid(column=1, row=3)
+check_label.grid(column=1, row=4)
 
 # Keep the window open
 window.mainloop()
