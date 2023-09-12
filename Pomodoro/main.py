@@ -18,6 +18,9 @@ LONG_BREAK_MIN = 20
 import tkinter
 # create a window
 window = tkinter.Tk()
+# Window title
+window.title("POMODORO")
+
 
 # Keep the window open
 window.mainloop()
