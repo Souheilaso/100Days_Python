@@ -15,3 +15,9 @@ LONG_BREAK_MIN = 20
 # ---------------------------- COUNTDOWN MECHANISM ------------------------------- #
 
 # ---------------------------- UI SETUP ------------------------------- #
+import tkinter
+# create a window
+window = tkinter.Tk()
+
+# Keep the window open
+window.mainloop()
