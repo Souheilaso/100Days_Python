@@ -43,6 +43,10 @@ timer_label.grid(column=1, row=0)
 start_button = tkinter.Button(text="Start")
 start_button.grid(column=0, row=3)
 
+# creating a Restart button
+restart_btn = tkinter.Button(text="Restart")
+
+
 # Keep the window open
 window.mainloop()
 
