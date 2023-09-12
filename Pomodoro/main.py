@@ -41,7 +41,7 @@ timer_label.grid(column=1, row=0)
 
 # creating start button
 start_button = tkinter.Button(text="Start")
-
+start_button.grid(column=0, row=3)
 
 # Keep the window open
 window.mainloop()
