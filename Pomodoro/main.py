@@ -39,6 +39,10 @@ canvas.grid(column=1, row=1)  # Use grid instead of pack
 timer_label = tkinter.Label(text="Timer", font=(FONT_NAME, 35, "bold"), fg=GREEN, bg=YELLOW)
 timer_label.grid(column=1, row=0)
 
+# creating start button
+start_button = tkinter.Button(text="Start")
+
+
 # Keep the window open
 window.mainloop()
 
