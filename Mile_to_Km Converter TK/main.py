@@ -25,4 +25,8 @@ number_label.grid(column=1, row=1)
 km_label = tkinter.Label(text="Km", font=("Arial", 24, "bold"))
 km_label.grid(column=2, row=1)
 
+# creating a calculate button
+button = tkinter.Button(text="Calculate", font=("Arial", 24, "bold"))
+button.grid(column=1, row=3)
+
 window.mainloop()
