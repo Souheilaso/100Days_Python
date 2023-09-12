@@ -40,12 +40,16 @@ timer_label = tkinter.Label(text="Timer", font=(FONT_NAME, 35, "bold"), fg=GREEN
 timer_label.grid(column=1, row=0)
 
 # creating start button
-start_button = tkinter.Button(text="Start")
+start_button = tkinter.Button(text="Start", highlightbackground=YELLOW, highlightthickness=0, bg=YELLOW)
 start_button.grid(column=0, row=3)
 
 # creating a Restart button
-restart_btn = tkinter.Button(text="Restart")
+restart_btn = tkinter.Button(text="Restart", highlightbackground=YELLOW, highlightthickness=0, bg=YELLOW)
 restart_btn.grid(column=3, row=3)
+
+# creating a check mark label
+check_label = tkinter.Label(text="✓", fg=GREEN, bg=YELLOW)
+check_label.grid(column=1, row=3)
 
 # Keep the window open
 window.mainloop()
