@@ -45,7 +45,7 @@ start_button.grid(column=0, row=3)
 
 # creating a Restart button
 restart_btn = tkinter.Button(text="Restart")
-
+restart_btn.grid(column=3, row=3)
 
 # Keep the window open
 window.mainloop()
