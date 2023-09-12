@@ -20,4 +20,9 @@ equal_label.grid(column=0, row=1)
 # creating column 1 label
 number_label = tkinter.Label(text=0, font=("Arial", 24, "bold"))
 number_label.grid(column=1, row=1)
+
+# creating column 2, row 1 label
+km_label = tkinter.Label(text="Km", font=("Arial", 24, "bold"))
+km_label.grid(column=2, row=1)
+
 window.mainloop()
