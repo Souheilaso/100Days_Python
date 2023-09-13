@@ -10,11 +10,16 @@ WORK_MIN = 25
 SHORT_BREAK_MIN = 5
 LONG_BREAK_MIN = 20
 
+
 # ---------------------------- TIMER RESET ------------------------------- #
 
 # ---------------------------- TIMER MECHANISM ------------------------------- #
 
 # ---------------------------- COUNTDOWN MECHANISM ------------------------------- #
+def count_down(count):
+    if count > 0:
+        window.after(1000, count_down, count - 1)
+
 
 # ---------------------------- UI SETUP ------------------------------- #
 
@@ -23,7 +28,8 @@ window = tkinter.Tk()
 # Window title
 window.title("POMODORO")
 window.config(padx=100, pady=50, bg=YELLOW)
-
+# execute a command after a time delay
+count_down(5)
 # Creating canvas
 canvas = tkinter.Canvas(width=200, height=224, bg=YELLOW, highlightthickness=0)
 # Finding the image using PhotoImage
@@ -31,7 +37,7 @@ image = tkinter.PhotoImage(file="tomato.png")
 # Creating the image
 canvas.create_image(100, 112, image=image)
 # Adding timing text
-canvas.create_text(100, 130, text="00:00", font=(FONT_NAME, 35, "bold"))
+timer_text = canvas.create_text(100, 130, text="00:00", font=(FONT_NAME, 35, "bold"))
 # Layout
 canvas.grid(column=1, row=1)  # Use grid instead of pack
 
@@ -53,4 +59,3 @@ check_label.grid(column=1, row=4)
 
 # Keep the window open
 window.mainloop()
-
