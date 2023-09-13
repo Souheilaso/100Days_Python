@@ -11,9 +11,13 @@ WORK_MIN = 25
 SHORT_BREAK_MIN = 5
 LONG_BREAK_MIN = 20
 reps = 0
+timer = None
 
 
 # ---------------------------- TIMER RESET ------------------------------- #
+def reset_timer():
+    window.after_cancel(timer)
+
 
 # ---------------------------- TIMER MECHANISM ------------------------------- #
 def start_timer():
@@ -40,7 +44,8 @@ def count_down(count):
     count_sec = count % 60  # Use modulo to get seconds
     canvas.itemconfig(timer_text, text=f"{count_min:02}:{count_sec:02}")  # Format as MM:SS
     if count > 0:
-        window.after(1000, count_down, count - 1)
+        global timer
+        timer = window.after(1000, count_down, count - 1)
     else:
         start_timer()
         mark = ""
@@ -84,11 +89,11 @@ start_button = tkinter.Button(text="Start", highlightbackground=YELLOW, highligh
 start_button.grid(column=0, row=3)
 
 # creating a Restart button
-restart_btn = tkinter.Button(text="Restart", highlightbackground=YELLOW, highlightthickness=0, bg=YELLOW)
+restart_btn = tkinter.Button(text="Restart", highlightbackground=YELLOW, highlightthickness=0, bg=YELLOW, command=reset_timer)
 restart_btn.grid(column=3, row=3)
 
 # creating a check mark label
-check_label = tkinter.Label(text="✓", fg=GREEN, bg=YELLOW)
+check_label = tkinter.Label(fg=GREEN, bg=YELLOW)
 check_label.grid(column=1, row=4)
 
 # Keep the window open
