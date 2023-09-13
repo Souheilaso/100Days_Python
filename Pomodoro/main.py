@@ -15,12 +15,15 @@ LONG_BREAK_MIN = 20
 
 # ---------------------------- TIMER MECHANISM ------------------------------- #
 def start_timer():
-    count_down(5)
+    count_down(WORK_MIN * 60)  # Start with 25 minutes (25 * 60 seconds)
 
 
 # ---------------------------- COUNTDOWN MECHANISM ------------------------------- #
+
 def count_down(count):
-    canvas.itemconfig(timer_text, text=count)
+    count_min = count // 60  # Use integer division to get minutes
+    count_sec = count % 60  # Use modulo to get seconds
+    canvas.itemconfig(timer_text, text=f"{count_min:02}:{count_sec:02}")  # Format as MM:SS
     if count > 0:
         window.after(1000, count_down, count - 1)
 
@@ -43,11 +46,8 @@ image = tkinter.PhotoImage(file="tomato.png")
 # Creating the image
 canvas.create_image(100, 112, image=image)
 
-# Adding timing text
-timer_text = canvas.create_text(100, 130, text="00:00", font=(FONT_NAME, 35, "bold"))
-
-# execute a command after a time delay
-count_down(5)
+# Adding timing text (initially set to 25:00)
+timer_text = canvas.create_text(100, 130, text="25:00", font=(FONT_NAME, 35, "bold"))
 
 # Layout
 canvas.grid(column=1, row=1)  # Use grid instead of pack
