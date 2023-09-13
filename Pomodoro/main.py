@@ -1,4 +1,5 @@
 import tkinter
+import math
 
 # ---------------------------- CONSTANTS ------------------------------- #
 PINK = "#e2979c"
@@ -42,6 +43,11 @@ def count_down(count):
         window.after(1000, count_down, count - 1)
     else:
         start_timer()
+        mark = ""
+        work_sessions = math.floor(reps / 2)
+        for _ in range(work_sessions):
+            mark += "✓"
+        check_label.config(text=mark)
 
 
 # ---------------------------- UI SETUP ------------------------------- #
