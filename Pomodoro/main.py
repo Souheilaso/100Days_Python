@@ -1,5 +1,8 @@
+import os
+import sys
 import tkinter
 import math
+import pygame
 
 # ---------------------------- CONSTANTS ------------------------------- #
 PINK = "#e2979c"
@@ -13,8 +16,17 @@ LONG_BREAK_MIN = 20
 reps = 0
 timer = None
 
+# Get the path to the script's directory
+script_directory = os.path.dirname(os.path.abspath(sys.argv[0]))
 
-# ---------------------------- TIMER RESET ------------------------------- #
+
+def play_sound():
+    sound_file_path = os.path.join(script_directory, "break.wav")
+    pygame.mixer.init()
+    pygame.mixer.music.load(sound_file_path)
+    pygame.mixer.music.play()
+
+
 def reset_timer():
     window.after_cancel(timer)
     canvas.itemconfig(timer_text, text="00:00")
@@ -24,11 +36,10 @@ def reset_timer():
     reps = 0
 
 
-# ---------------------------- TIMER MECHANISM ------------------------------- #
 def start_timer():
     global reps
     reps += 1
-    work_sec = WORK_MIN * 60
+    work_sec = 1 * 60
     short_break_sec = SHORT_BREAK_MIN * 60
     long_break_sec = LONG_BREAK_MIN * 60
     if reps % 8 == 0:  # After 4 work intervals, take a long break
@@ -41,8 +52,6 @@ def start_timer():
         count_down(work_sec)
         timer_label.config(text="Work", fg=GREEN)
 
-
-# ---------------------------- COUNTDOWN MECHANISM ------------------------------- #
 
 def count_down(count):
     count_min = count // 60  # Use integer division to get minutes
@@ -58,9 +67,8 @@ def count_down(count):
         for _ in range(work_sessions):
             mark += "✓"
         check_label.config(text=mark)
+        play_sound()
 
-
-# ---------------------------- UI SETUP ------------------------------- #
 
 # Create a window
 window = tkinter.Tk()
@@ -94,7 +102,8 @@ start_button = tkinter.Button(text="Start", highlightbackground=YELLOW, highligh
 start_button.grid(column=0, row=3)
 
 # creating a Restart button
-restart_btn = tkinter.Button(text="Restart", highlightbackground=YELLOW, highlightthickness=0, bg=YELLOW, command=reset_timer)
+restart_btn = tkinter.Button(text="Restart", highlightbackground=YELLOW, highlightthickness=0, bg=YELLOW,
+                             command=reset_timer)
 restart_btn.grid(column=3, row=3)
 
 # creating a check mark label
