@@ -17,10 +17,19 @@ reps = 0
 # ---------------------------- TIMER MECHANISM ------------------------------- #
 def start_timer():
     global reps
+    reps += 1
     work_sec = WORK_MIN * 60
     short_break_sec = SHORT_BREAK_MIN * 60
-    long_break_min = LONG_BREAK_MIN * 60
-    count_down(WORK_MIN * 60)  # Start with 25 minutes (25 * 60 seconds)
+    long_break_sec = LONG_BREAK_MIN * 60
+    if reps % 8 == 0:  # After 4 work intervals, take a long break
+        count_down(long_break_sec)
+        timer_label.config(text="Long Break", fg=RED)
+    elif reps % 2 == 0:  # After every even work interval, take a short break
+        count_down(short_break_sec)
+        timer_label.config(text="Short Break", fg=PINK)
+    else:  # Otherwise, work interval
+        count_down(work_sec)
+        timer_label.config(text="Work", fg=GREEN)
 
 
 # ---------------------------- COUNTDOWN MECHANISM ------------------------------- #
@@ -31,6 +40,8 @@ def count_down(count):
     canvas.itemconfig(timer_text, text=f"{count_min:02}:{count_sec:02}")  # Format as MM:SS
     if count > 0:
         window.after(1000, count_down, count - 1)
+    else:
+        start_timer()
 
 
 # ---------------------------- UI SETUP ------------------------------- #
