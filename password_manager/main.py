@@ -27,8 +27,10 @@ canvas.grid(column=1, row=0)
 
 # Create Website Label
 web_label = tkinter.Label(text="Website:")
+web_label.grid(column=0, row=0)
 # Create a Website name Entry
 website_name = tkinter.Entry()
+
 
 # Create Email/username Label
 email_user_label = tkinter.Label(text="Email/Username:")
