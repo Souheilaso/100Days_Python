@@ -25,6 +25,17 @@ image = tkinter.PhotoImage(file="logo.png")
 canvas.create_image(250, 200, image=image)
 canvas.grid(column=1, row=0)
 
+# Create a Website name Entry
+website_name = tkinter.Entry()
+# Create Email/Username Entry
+email_username = tkinter.Entry()
+# Create a password Entry
+password_entry = tkinter.Entry()
+# create Generate Password Button
+password_btn = tkinter.Button()
+# Create Add Button
+add_btn = tkinter.Button()
+
 
 
 # keep the window in a loop
