@@ -40,8 +40,13 @@ email_user_label.grid(column=0, row=2)
 email_username = tkinter.Entry()
 email_username.grid(column=1, row=2)
 
+# Add a Password Label
+password_label = tkinter.Label(text="Password:")
+password_label.grid(column=0, row=3)
 # Create a password Entry
 password_entry = tkinter.Entry()
+password_entry.grid(column=1, row=3)
+
 
 
 # create Generate Password Button
