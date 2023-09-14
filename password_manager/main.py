@@ -37,10 +37,12 @@ email_username = tkinter.Entry()
 
 # Create a password Entry
 password_entry = tkinter.Entry()
+
+
 # create Generate Password Button
-password_btn = tkinter.Button()
+password_btn = tkinter.Button(text="Generate Password")
 # Create Add Button
-add_btn = tkinter.Button()
+add_btn = tkinter.Button(text="Add")
 
 
 
