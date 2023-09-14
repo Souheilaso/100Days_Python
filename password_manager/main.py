@@ -21,6 +21,9 @@ canvas = tkinter.Canvas(width=200, height=224)
 # Finding the image
 image = tkinter.PhotoImage(file="logo.png")
 
+# creating the image location in the canvas
+canvas.create_image(100, 112, image=image)
+
 
 
 
