@@ -18,6 +18,9 @@ window.config(padx=200, pady=200)
 # creating a canvas
 canvas = tkinter.Canvas(width=200, height=224)
 
+# Finding the image
+image = tkinter.PhotoImage(file="logo.png")
+
 
 
 
