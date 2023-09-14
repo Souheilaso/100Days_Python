@@ -10,3 +10,6 @@ import tkinter
 
 # create a window
 window = tkinter.Tk()
+
+# keep the window in a loop
+window.mainloop()
