@@ -25,6 +25,8 @@ image = tkinter.PhotoImage(file="logo.png")
 canvas.create_image(250, 200, image=image)
 canvas.grid(column=1, row=0)
 
+# Create Website Label
+web_label = tkinter.Label(text="Website:")
 # Create a Website name Entry
 website_name = tkinter.Entry()
 # Create Email/Username Entry
