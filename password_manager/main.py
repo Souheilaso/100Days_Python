@@ -13,7 +13,7 @@ window = tkinter.Tk()
 
 # Window title
 window.title("Password Manager")
-window.config(padx=30, pady=30)
+window.config(padx=20, pady=20)
 
 # creating a canvas
 canvas = tkinter.Canvas(width=200, height=200)
