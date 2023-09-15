@@ -22,7 +22,7 @@ canvas = tkinter.Canvas(width=200, height=200)
 image = tkinter.PhotoImage(file="logo.png")
 
 # creating the image location in the canvas
-canvas.create_image(120, 100, image=image)
+canvas.create_image(100, 100, image=image)
 canvas.grid(column=1, row=0)
 
 # Create Website Label
