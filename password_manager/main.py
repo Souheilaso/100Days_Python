@@ -9,7 +9,7 @@ def save_details():
     email = email_username.get()
 
     if website and password and email:
-        with open("passwords.txt") as file:
+        with open("passwords.txt", "a") as file:
             file.write(f"{website}|{email}|{password}")
 # ----------------------- UI SETUP ---------------------- #
 
