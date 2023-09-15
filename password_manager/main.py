@@ -1,4 +1,5 @@
 import tkinter
+import tkinter.messagebox
 # ----------------------- PASSWORD GENERATOR ---------------------- #
 
 
@@ -10,7 +11,16 @@ def save_details():
 
     if website and password and email:
         with open("passwords.txt", "a") as file:
-            file.write(f"{website}|{email}|{password}")
+            data = f"{website} | {email} | {password}\n"
+            file.write(data)
+
+        website_name.delete(0, tkinter.END)
+        password_entry.delete(0, tkinter.END)
+        email_username.delete(0, tkinter.END)
+
+        tkinter.messagebox.showinfo("Success", "Password details saved successfully.")
+    else:
+        tkinter.messagebox.showerror("Error", "Please fill in all fields.")
 # ----------------------- UI SETUP ---------------------- #
 
 
