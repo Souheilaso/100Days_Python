@@ -3,8 +3,10 @@ import tkinter
 
 
 # ----------------------- SAVE PASSWORD ---------------------- #
-
-
+def save_details():
+    website = website_name.get()
+    password = password_entry.get()
+    email = email_username.get()
 # ----------------------- UI SETUP ---------------------- #
 
 
@@ -41,6 +43,7 @@ email_user_label.grid(column=0, row=2)
 # Create Email/Username Entry
 email_username = tkinter.Entry(width=35)
 email_username.grid(column=1, row=2, columnspan=2)
+email_username.insert(0, "@gmail.com")
 
 # Add a Password Label
 password_label = tkinter.Label(text="Password:")
