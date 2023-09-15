@@ -1,22 +1,28 @@
 import tkinter
 import tkinter.messagebox
 import random
+
+
 # ----------------------- PASSWORD GENERATOR ---------------------- #
-letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
-numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
-symbols = ['!', '#', '$', '%', '&', '(', ')', '*', '+']
+def generate_password():
+    letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u',
+               'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P',
+               'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
+    numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
+    symbols = ['!', '#', '$', '%', '&', '(', ')', '*', '+']
 
-nr_letters = random.randint(8, 10)
-nr_symbols = random.randint(2, 4)
-nr_numbers = random.randint(2, 4)
+    nr_letters = random.randint(8, 10)
+    nr_symbols = random.randint(2, 4)
+    nr_numbers = random.randint(2, 4)
 
-password_list = [random.choice(letters) for _ in range(nr_letters)] + \
-               [random.choice(symbols) for _ in range(nr_symbols)] + \
-               [random.choice(numbers) for _ in range(nr_numbers)]  # Corrected this line
+    password_list = [random.choice(letters) for _ in range(nr_letters)] + \
+                    [random.choice(symbols) for _ in range(nr_symbols)] + \
+                    [random.choice(numbers) for _ in range(nr_numbers)]  # Corrected this line
 
-random.shuffle(password_list)
+    random.shuffle(password_list)
 
-password = "".join(password_list)
+    password = "".join(password_list)
+
 
 # ----------------------- SAVE PASSWORD ---------------------- #
 def save_details():
@@ -68,7 +74,6 @@ website_name.grid(column=1, row=1, columnspan=2)
 # This will start a cursor and focus on the entry
 website_name.focus()
 
-
 # Create Email/username Label
 email_user_label = tkinter.Label(text="Email/Username:")
 email_user_label.grid(column=0, row=2)
@@ -84,14 +89,12 @@ password_label.grid(column=0, row=3)
 password_entry = tkinter.Entry(width=18)
 password_entry.grid(column=1, row=3, columnspan=1)
 
-
 # create Generate Password Button
-password_btn = tkinter.Button(text="Generate Password")
+password_btn = tkinter.Button(text="Generate Password", command=generate_password)
 password_btn.grid(column=2, row=3)
 # Create Add Button
 add_btn = tkinter.Button(text="Add", width=36, command=save_details)
 add_btn.grid(column=1, row=4, columnspan=2)
-
 
 # keep the window in a loop
 window.mainloop()
