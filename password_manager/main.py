@@ -18,9 +18,6 @@ random.shuffle(password_list)
 
 password = "".join(password_list)
 
-print(f"Your password is: {password}")
-
-
 # ----------------------- SAVE PASSWORD ---------------------- #
 def save_details():
     website = website_name.get()
