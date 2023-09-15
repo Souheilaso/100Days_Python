@@ -44,8 +44,8 @@ email_username.grid(column=1, row=2, columnspan=2)
 password_label = tkinter.Label(text="Password:")
 password_label.grid(column=0, row=3)
 # Create a password Entry
-password_entry = tkinter.Entry(width=21)
-password_entry.grid(column=1, row=3)
+password_entry = tkinter.Entry(width=18)
+password_entry.grid(column=1, row=3, columnspan=1)
 
 
 # create Generate Password Button
@@ -54,7 +54,6 @@ password_btn.grid(column=2, row=3)
 # Create Add Button
 add_btn = tkinter.Button(text="Add", width=36)
 add_btn.grid(column=1, row=4, columnspan=2)
-
 
 
 # keep the window in a loop
