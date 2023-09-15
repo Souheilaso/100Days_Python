@@ -31,6 +31,8 @@ web_label.grid(column=0, row=1)
 # Create a Website name Entry
 website_name = tkinter.Entry(width=35)
 website_name.grid(column=1, row=1, columnspan=2)
+# This will start a cursor and focus on the entry
+website_name.focus()
 
 
 # Create Email/username Label
