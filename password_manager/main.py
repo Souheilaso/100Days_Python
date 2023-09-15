@@ -7,6 +7,10 @@ def save_details():
     website = website_name.get()
     password = password_entry.get()
     email = email_username.get()
+
+    if website and password and email:
+        with open("passwords.txt") as file:
+            file.write(f"{website}|{email}|{password}")
 # ----------------------- UI SETUP ---------------------- #
 
 
@@ -57,7 +61,7 @@ password_entry.grid(column=1, row=3, columnspan=1)
 password_btn = tkinter.Button(text="Generate Password")
 password_btn.grid(column=2, row=3)
 # Create Add Button
-add_btn = tkinter.Button(text="Add", width=36)
+add_btn = tkinter.Button(text="Add", width=36, command=save_details)
 add_btn.grid(column=1, row=4, columnspan=2)
 
 
