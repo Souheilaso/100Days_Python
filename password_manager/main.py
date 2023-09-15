@@ -1,6 +1,24 @@
 import tkinter
 import tkinter.messagebox
+import random
 # ----------------------- PASSWORD GENERATOR ---------------------- #
+letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
+numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
+symbols = ['!', '#', '$', '%', '&', '(', ')', '*', '+']
+
+nr_letters = random.randint(8, 10)
+nr_symbols = random.randint(2, 4)
+nr_numbers = random.randint(2, 4)
+
+password_list = [random.choice(letters) for _ in range(nr_letters)] + \
+               [random.choice(symbols) for _ in range(nr_symbols)] + \
+               [random.choice(numbers) for _ in range(nr_numbers)]  # Corrected this line
+
+random.shuffle(password_list)
+
+password = "".join(password_list)
+
+print(f"Your password is: {password}")
 
 
 # ----------------------- SAVE PASSWORD ---------------------- #
@@ -18,9 +36,12 @@ def save_details():
         password_entry.delete(0, tkinter.END)
         email_username.delete(0, tkinter.END)
 
-        tkinter.messagebox.showinfo("Success", "Password details saved successfully.")
-    else:
+    if len(website) == 0 or len(password) == 0:
         tkinter.messagebox.showerror("Error", "Please fill in all fields.")
+    else:
+        tkinter.messagebox.showinfo(website, "Password details saved successfully.")
+
+
 # ----------------------- UI SETUP ---------------------- #
 
 
