@@ -39,10 +39,14 @@ def save_details():
     }}
 
     if website and password and email:
+        with open("passwords.json", "r") as file:
+            # reading old data
+            data = json.load(file)
+            # updating old data
+            data.update(new_data)
         with open("passwords.json", "w") as file:
-            json.dump(new_data, file, indent=4)
-            # data = f"{website} | {email} | {password}\n"
-            # file.write(data)
+            # saving updated data
+            json.dump(data, file, indent=4)
 
         website_name.delete(0, tkinter.END)
         password_entry.delete(0, tkinter.END)
