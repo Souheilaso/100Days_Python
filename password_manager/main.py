@@ -34,7 +34,7 @@ def save_details():
     email = email_username.get()
 
     if website and password and email:
-        with open("passwords.txt", "a") as file:
+        with open("passwords.json", "a") as file:
             data = f"{website} | {email} | {password}\n"
             file.write(data)
 
