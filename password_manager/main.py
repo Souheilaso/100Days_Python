@@ -37,20 +37,26 @@ def save_details():
         "email": email,
         "password": password,
     }}
-
     if website and password and email:
-        with open("passwords.json", "r") as file:
-            # reading old data
-            data = json.load(file)
+        try:
+            with open("passwords.json", "r") as file:
+                # reading old data
+                data = json.load(file)
+        except FileNotFoundError:
+            with open("password.json", "w") as file:
+                json.dump(new_data, file, indent=4)
+        else:
             # updating old data
             data.update(new_data)
-        with open("passwords.json", "w") as file:
-            # saving updated data
-            json.dump(data, file, indent=4)
 
-        website_name.delete(0, tkinter.END)
-        password_entry.delete(0, tkinter.END)
-        email_username.delete(0, tkinter.END)
+            with open("passwords.json", "w") as file:
+                # saving updated data
+                json.dump(data, file, indent=4)
+
+        finally:
+            website_name.delete(0, tkinter.END)
+            password_entry.delete(0, tkinter.END)
+            email_username.delete(0, tkinter.END)
 
     if len(website) == 0 or len(password) == 0:
         tkinter.messagebox.showerror("Error", "Please fill in all fields.")
