@@ -40,7 +40,7 @@ def save_details():
 
     if website and password and email:
         with open("passwords.json", "w") as file:
-            json.dump(new_data, file)
+            json.dump(new_data, file, indent=4)
             # data = f"{website} | {email} | {password}\n"
             # file.write(data)
 
